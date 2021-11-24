@@ -6,7 +6,7 @@ const ELASTIC_HOST = 'localhost:9200';
 
 const MONGO_PATH = local_mongo_path;
 
-const local = 'http://192.168.1.58:3000/';
+const local = 'http://192.168.1.2:3000/';
 
 const server = 'https://api.awlam.com/';
 
