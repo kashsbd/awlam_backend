@@ -15,23 +15,21 @@
     "author": "Prakash Subedi",
     "license": "ISC",
     "dependencies": {
-        "body-parser": "^1.19.0",
+        "body-parser": "^1.18.3",
         "cors": "^2.8.5",
-        "ejs": "^3.1.6",
-        "elasticsearch": "^16.7.2",
-        "express": "^4.17.1",
+        "ejs": "^2.6.1",
+        "express": "^4.16.3",
         "fluent-ffmpeg": "^2.1.2",
         "fs-readfile-promise": "^3.0.1",
-        "jsonwebtoken": "^8.5.1",
+        "jsonwebtoken": "^8.3.0",
         "lodash": "^4.17.21",
         "memory-cache": "^0.2.0",
-        "mongoose": "^6.0.13",
-        "mongoose-elasticsearch-xp": "^5.8.0",
-        "mongoose-paginate": "^5.0.3",
-        "multer": "^1.4.3",
-        "onesignal-node": "^3.3.0",
-        "prettysize": "^2.0.0",
+        "mongoose": "^5.4.14",
+        "mongoose-paginate": "5.0.3",
+        "multer": "^1.4.0",
+        "onesignal-node": "^2.0.1",
+        "prettysize": "^1.1.0",
         "sharp": "^0.29.3",
-        "socket.io": "^4.4.0"
+        "socket.io": "^2.1.1"
     }
 }

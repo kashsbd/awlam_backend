@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate');
-const mexp = require('mongoose-elasticsearch-xp');
+// const mexp = require('mongoose-elasticsearch-xp');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
@@ -18,11 +18,15 @@ const userSchema = new Schema(
             required: true
         },
         //detail info
+        // name: {
+        //     type: String,
+        //     required: [true, 'User name is required.'],
+        //     es_indexed: true,
+        //     es_boost: 2.0
+        // },
         name: {
             type: String,
-            required: [true, 'User name is required.'],
-            es_indexed: true,
-            es_boost: 2.0
+            required: [true, 'User name is required.']
         },
         country: String,
         city: String,
@@ -50,47 +54,47 @@ const userSchema = new Schema(
 );
 
 userSchema.plugin(mongoosePaginate);
-userSchema.plugin(mexp);
+// userSchema.plugin(mexp);
 
 let User = mongoose.model('User', userSchema);
 
-User
-    .esCreateMapping({
-        "settings": {
-            "number_of_shards": 1,
-            "analysis": {
-                "filter": {
-                    "autocomplete_filter": {
-                        "type": "edge_ngram",
-                        "min_gram": 1,
-                        "max_gram": 15
-                    }
-                },
-                "analyzer": {
-                    "autocomplete": {
-                        "type": "custom",
-                        "tokenizer": "standard",
-                        "filter": [
-                            "lowercase",
-                            "autocomplete_filter"
-                        ]
-                    }
-                }
-            }
-        },
-        "mappings": {
-            "user": {
-                "properties": {
-                    "name": {
-                        "type": "text",
-                        "analyzer": "autocomplete",
-                        "search_analyzer": "autocomplete"
-                    },
-                }
-            }
-        }
-    })
-    .then(mappings => console.log('user mapping done.'))
-    .catch(err => console.log('error creating mapping (you can safely ignore this)'));
+// User
+//     .esCreateMapping({
+//         "settings": {
+//             "number_of_shards": 1,
+//             "analysis": {
+//                 "filter": {
+//                     "autocomplete_filter": {
+//                         "type": "edge_ngram",
+//                         "min_gram": 1,
+//                         "max_gram": 15
+//                     }
+//                 },
+//                 "analyzer": {
+//                     "autocomplete": {
+//                         "type": "custom",
+//                         "tokenizer": "standard",
+//                         "filter": [
+//                             "lowercase",
+//                             "autocomplete_filter"
+//                         ]
+//                     }
+//                 }
+//             }
+//         },
+//         "mappings": {
+//             "user": {
+//                 "properties": {
+//                     "name": {
+//                         "type": "text",
+//                         "analyzer": "autocomplete",
+//                         "search_analyzer": "autocomplete"
+//                     },
+//                 }
+//             }
+//         }
+//     })
+//     .then(mappings => console.log('user mapping done.'))
+//     .catch(err => console.log('error creating mapping (you can safely ignore this)'));
 
 module.exports = User;

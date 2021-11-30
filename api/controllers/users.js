@@ -135,6 +135,7 @@ exports.user_signup = async (req, res, next) => {
                 role: result.role
             });
         } catch (err) {
+            console.log(err);
             return res.status(500).json({
                 error: err
             })

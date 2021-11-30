@@ -1,12 +1,12 @@
 const os = require('os');
 
-const local_mongo_path = 'mongodb://localhost:27017/Awlam';
+const local_mongo_path = 'mongodb://127.0.0.1:27017/Awlam';
 
-const ELASTIC_HOST = 'localhost:9200';
+const ELASTIC_HOST = '127.0.0.1:9200';
 
 const MONGO_PATH = local_mongo_path;
 
-const local = 'http://192.168.1.2:3000/';
+const local = 'http://192.168.1.5:3000/';
 
 const server = 'https://api.awlam.com/';
 
@@ -14,11 +14,11 @@ const SERVER_URL = local;
 
 const JWT_KEY = 'secure_marter_key';
 
-const ONE_SIGNAL_USER_AUTH_KEY = 'ZjhhODAyMGEtOWU5ZC00N2JhLWIyY2MtM2VkZjY5OWJhYzlj';
+const ONE_SIGNAL_USER_AUTH_KEY = 'MjczNjgyNzgtNmExNi00ODFkLWFkMjMtNjA0MzcyZjkzOTA2';
 
-const ONE_SIGNAL_REST_KEY = 'YTk4ZmZiNGUtZjBkYy00ZWYzLThlYTctOTMyNTY4Zjk2MWM5';
+const ONE_SIGNAL_REST_KEY = 'NzQ3YzA5MWQtYTg1Ny00NTUzLWE5MzMtNTg2YTU5MWUxZGE3';
 
-const ONE_SIGNAL_APP_ID = 'd92f7cdb-f715-430b-8fe0-3dc1b900f863';
+const ONE_SIGNAL_APP_ID = '94c2b2eb-f114-45ec-835a-f0c03b45e894';
 
 const FFMPEG_PATH = os.homedir() + '/ffmpeg/ffmpeg';
 
