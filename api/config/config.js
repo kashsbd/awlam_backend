@@ -8,7 +8,7 @@ const local = 'http://192.168.1.2:3000/';
 
 const server = 'http://172.104.33.119:3000/';
 
-const SERVER_URL = local;
+const SERVER_URL = server;
 
 const JWT_KEY = 'secure_marter_key';
 
