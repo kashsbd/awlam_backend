@@ -1,14 +1,12 @@
 const os = require('os');
 
-const local_mongo_path = 'mongodb://127.0.0.1:27017/Awlam';
-
-const ELASTIC_HOST = '127.0.0.1:9200';
+const local_mongo_path = 'mongodb://127.0.0.1:3500/Awlam';
 
 const MONGO_PATH = local_mongo_path;
 
-const local = 'http://192.168.1.5:3000/';
+const local = 'http://192.168.1.2:3000/';
 
-const server = 'https://api.awlam.com/';
+const server = 'http://172.104.33.119:3000/';
 
 const SERVER_URL = local;
 
@@ -50,7 +48,6 @@ module.exports = {
     THUMBNAIL_URL,
     PROPIC_URL,
     CITIZEN_PIC_URL,
-    ELASTIC_HOST,
     TOPIC_URL,
     EVENT_URL,
     GOVERNMENT_URL
